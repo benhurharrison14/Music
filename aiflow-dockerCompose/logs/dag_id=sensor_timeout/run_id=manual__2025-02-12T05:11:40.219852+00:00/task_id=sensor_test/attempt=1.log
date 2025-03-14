@@ -1,0 +1,35 @@
+[2025-02-12T05:11:42.904+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-02-12T05:11:42.938+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: sensor_timeout.sensor_test manual__2025-02-12T05:11:40.219852+00:00 [queued]>
+[2025-02-12T05:11:42.956+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: sensor_timeout.sensor_test manual__2025-02-12T05:11:40.219852+00:00 [queued]>
+[2025-02-12T05:11:42.957+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 1
+[2025-02-12T05:11:42.979+0000] {taskinstance.py:2889} INFO - Executing <Task(S3KeySensor): sensor_test> on 2025-02-12 05:11:40.219852+00:00
+[2025-02-12T05:11:43.001+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=187) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-02-12T05:11:43.003+0000] {standard_task_runner.py:72} INFO - Started process 189 to run task
+[2025-02-12T05:11:43.005+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'sensor_timeout', 'sensor_test', 'manual__2025-02-12T05:11:40.219852+00:00', '--job-id', '117', '--raw', '--subdir', 'DAGS_FOLDER/s3test_dag.py', '--cfg-path', '/tmp/tmpvhwoc06g']
+[2025-02-12T05:11:43.007+0000] {standard_task_runner.py:105} INFO - Job 117: Subtask sensor_test
+[2025-02-12T05:11:43.394+0000] {task_command.py:467} INFO - Running <TaskInstance: sensor_timeout.sensor_test manual__2025-02-12T05:11:40.219852+00:00 [running]> on host 3b1fc8480f51
+[2025-02-12T05:11:43.518+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='sensor_timeout' AIRFLOW_CTX_TASK_ID='sensor_test' AIRFLOW_CTX_EXECUTION_DATE='2025-02-12T05:11:40.219852+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-02-12T05:11:40.219852+00:00'
+[2025-02-12T05:11:43.519+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2025-02-12T05:11:43.519+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2025-02-12T05:11:43.520+0000] {logging_mixin.py:190} INFO - Current task name:sensor_test state:running start_date:2025-02-12 05:11:42.939206+00:00
+[2025-02-12T05:11:43.520+0000] {logging_mixin.py:190} INFO - Dag name:sensor_timeout and current dag run status:running
+[2025-02-12T05:11:43.520+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-02-12T05:11:43.521+0000] {baseoperator.py:421} WARNING - S3KeySensor.execute cannot be called outside TaskInstance!
+[2025-02-12T05:11:43.521+0000] {s3.py:116} INFO - Poking for key : s3://***-test-benhur/data.csv
+[2025-02-12T05:11:43.535+0000] {base.py:84} INFO - Retrieving connection 'aws_default'
+[2025-02-12T05:11:43.535+0000] {connection_wrapper.py:328} INFO - AWS Connection (conn_id='aws_default', conn_type='aws') credentials retrieved from extra.
+[2025-02-12T05:11:47.039+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/urllib3/connectionpool.py:1099: InsecureRequestWarning: Unverified HTTPS request is being made to host '***-test-benhur.s3.eu-north-1.amazonaws.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+
+[2025-02-12T05:11:47.236+0000] {base.py:336} INFO - Success criteria met. Exiting.
+[2025-02-12T05:11:47.249+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-02-12T05:11:47.249+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=sensor_timeout, task_id=sensor_test, run_id=manual__2025-02-12T05:11:40.219852+00:00, execution_date=20250212T051140, start_date=20250212T051142, end_date=20250212T051147
+[2025-02-12T05:11:47.268+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2025-02-12T05:11:47.268+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2025-02-12T05:11:47.269+0000] {logging_mixin.py:190} INFO - Dag name:sensor_timeout queued_at:2025-02-12 05:11:40.244505+00:00
+[2025-02-12T05:11:47.269+0000] {logging_mixin.py:190} INFO - Task hostname:3b1fc8480f51 operator:S3KeySensor
+[2025-02-12T05:11:47.311+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-02-12T05:11:47.554+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-02-12T05:11:47.556+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

@@ -1,0 +1,32 @@
+[2025-02-18T04:29:06.791+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-02-18T04:29:06.826+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: example_dag.print_hello scheduled__2025-02-12T12:00:00+00:00 [queued]>
+[2025-02-18T04:29:06.841+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: example_dag.print_hello scheduled__2025-02-12T12:00:00+00:00 [queued]>
+[2025-02-18T04:29:06.842+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 3
+[2025-02-18T04:29:07.097+0000] {taskinstance.py:2889} INFO - Executing <Task(BashOperator): print_hello> on 2025-02-12 12:00:00+00:00
+[2025-02-18T04:29:07.116+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=71) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-02-18T04:29:07.118+0000] {standard_task_runner.py:72} INFO - Started process 81 to run task
+[2025-02-18T04:29:07.119+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'example_dag', 'print_hello', 'scheduled__2025-02-12T12:00:00+00:00', '--job-id', '142', '--raw', '--subdir', 'DAGS_FOLDER/sample2_dag.py', '--cfg-path', '/tmp/tmpuhhxho40']
+[2025-02-18T04:29:07.121+0000] {standard_task_runner.py:105} INFO - Job 142: Subtask print_hello
+[2025-02-18T04:29:07.201+0000] {task_command.py:467} INFO - Running <TaskInstance: example_dag.print_hello scheduled__2025-02-12T12:00:00+00:00 [running]> on host d70a9c8071c1
+[2025-02-18T04:29:07.350+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='example_dag' AIRFLOW_CTX_TASK_ID='print_hello' AIRFLOW_CTX_EXECUTION_DATE='2025-02-12T12:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-02-12T12:00:00+00:00'
+[2025-02-18T04:29:07.352+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2025-02-18T04:29:07.353+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2025-02-18T04:29:07.353+0000] {logging_mixin.py:190} INFO - Current task name:print_hello state:running start_date:2025-02-18 04:29:06.827451+00:00
+[2025-02-18T04:29:07.353+0000] {logging_mixin.py:190} INFO - Dag name:example_dag and current dag run status:running
+[2025-02-18T04:29:07.354+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-02-18T04:29:07.355+0000] {subprocess.py:78} INFO - Tmp dir root location: /tmp
+[2025-02-18T04:29:07.356+0000] {subprocess.py:88} INFO - Running command: ['/usr/bin/bash', '-c', "echo 'Hello, Airflow!'"]
+[2025-02-18T04:29:07.394+0000] {subprocess.py:99} INFO - Output:
+[2025-02-18T04:29:07.397+0000] {subprocess.py:106} INFO - Hello, Airflow!
+[2025-02-18T04:29:07.399+0000] {subprocess.py:110} INFO - Command exited with return code 0
+[2025-02-18T04:29:07.449+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-02-18T04:29:07.450+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=example_dag, task_id=print_hello, run_id=scheduled__2025-02-12T12:00:00+00:00, execution_date=20250212T120000, start_date=20250218T042906, end_date=20250218T042907
+[2025-02-18T04:29:07.468+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2025-02-18T04:29:07.468+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2025-02-18T04:29:07.469+0000] {logging_mixin.py:190} INFO - Dag name:example_dag queued_at:2025-02-18 04:28:59.518724+00:00
+[2025-02-18T04:29:07.469+0000] {logging_mixin.py:190} INFO - Task hostname:d70a9c8071c1 operator:BashOperator
+[2025-02-18T04:29:07.537+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-02-18T04:29:07.584+0000] {taskinstance.py:3895} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-02-18T04:29:07.587+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

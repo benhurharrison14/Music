@@ -1,0 +1,230 @@
+[2025-02-12T05:17:08.477+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-02-12T05:17:08.498+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: sensor_timeout.sensor_test manual__2025-02-12T05:17:05.865029+00:00 [queued]>
+[2025-02-12T05:17:08.509+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: sensor_timeout.sensor_test manual__2025-02-12T05:17:05.865029+00:00 [queued]>
+[2025-02-12T05:17:08.510+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 1
+[2025-02-12T05:17:08.532+0000] {taskinstance.py:2889} INFO - Executing <Task(S3KeySensor): sensor_test> on 2025-02-12 05:17:05.865029+00:00
+[2025-02-12T05:17:08.546+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=258) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-02-12T05:17:08.548+0000] {standard_task_runner.py:72} INFO - Started process 260 to run task
+[2025-02-12T05:17:08.548+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'sensor_timeout', 'sensor_test', 'manual__2025-02-12T05:17:05.865029+00:00', '--job-id', '119', '--raw', '--subdir', 'DAGS_FOLDER/s3test_dag.py', '--cfg-path', '/tmp/tmpj335k8ik']
+[2025-02-12T05:17:08.550+0000] {standard_task_runner.py:105} INFO - Job 119: Subtask sensor_test
+[2025-02-12T05:17:08.892+0000] {task_command.py:467} INFO - Running <TaskInstance: sensor_timeout.sensor_test manual__2025-02-12T05:17:05.865029+00:00 [running]> on host 3b1fc8480f51
+[2025-02-12T05:17:09.011+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='sensor_timeout' AIRFLOW_CTX_TASK_ID='sensor_test' AIRFLOW_CTX_EXECUTION_DATE='2025-02-12T05:17:05.865029+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-02-12T05:17:05.865029+00:00'
+[2025-02-12T05:17:09.012+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2025-02-12T05:17:09.012+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2025-02-12T05:17:09.013+0000] {logging_mixin.py:190} INFO - Current task name:sensor_test state:running start_date:2025-02-12 05:17:08.498955+00:00
+[2025-02-12T05:17:09.013+0000] {logging_mixin.py:190} INFO - Dag name:sensor_timeout and current dag run status:running
+[2025-02-12T05:17:09.014+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-02-12T05:17:09.015+0000] {baseoperator.py:421} WARNING - S3KeySensor.execute cannot be called outside TaskInstance!
+[2025-02-12T05:17:09.029+0000] {s3.py:116} INFO - Poking for key : s3://***-test-benhur/data.csv
+[2025-02-12T05:17:09.046+0000] {base.py:84} INFO - Retrieving connection 'aws_default'
+[2025-02-12T05:17:09.047+0000] {connection_wrapper.py:328} INFO - AWS Connection (conn_id='aws_default', conn_type='aws') credentials retrieved from extra.
+[2025-02-12T05:17:17.645+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/urllib3/connectionpool.py:1099: InsecureRequestWarning: Unverified HTTPS request is being made to host '***-test-benhur.s3.eu-north-1.amazonaws.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+
+[2025-02-12T05:17:17.889+0000] {taskinstance.py:309} INFO - Rescheduling task, marking task as UP_FOR_RESCHEDULE
+[2025-02-12T05:17:17.889+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-02-12T05:17:17.942+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-02-12T05:17:17.972+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-02-12T05:17:17.973+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2025-02-12T05:17:50.469+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-02-12T05:17:50.500+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: sensor_timeout.sensor_test manual__2025-02-12T05:17:05.865029+00:00 [queued]>
+[2025-02-12T05:17:50.515+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: sensor_timeout.sensor_test manual__2025-02-12T05:17:05.865029+00:00 [queued]>
+[2025-02-12T05:17:50.516+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 1
+[2025-02-12T05:17:50.545+0000] {taskinstance.py:2889} INFO - Executing <Task(S3KeySensor): sensor_test> on 2025-02-12 05:17:05.865029+00:00
+[2025-02-12T05:17:50.566+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=276) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-02-12T05:17:50.569+0000] {standard_task_runner.py:72} INFO - Started process 278 to run task
+[2025-02-12T05:17:50.569+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'sensor_timeout', 'sensor_test', 'manual__2025-02-12T05:17:05.865029+00:00', '--job-id', '120', '--raw', '--subdir', 'DAGS_FOLDER/s3test_dag.py', '--cfg-path', '/tmp/tmpdwjn8bve']
+[2025-02-12T05:17:50.571+0000] {standard_task_runner.py:105} INFO - Job 120: Subtask sensor_test
+[2025-02-12T05:17:51.049+0000] {task_command.py:467} INFO - Running <TaskInstance: sensor_timeout.sensor_test manual__2025-02-12T05:17:05.865029+00:00 [running]> on host 3b1fc8480f51
+[2025-02-12T05:17:51.210+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='sensor_timeout' AIRFLOW_CTX_TASK_ID='sensor_test' AIRFLOW_CTX_EXECUTION_DATE='2025-02-12T05:17:05.865029+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-02-12T05:17:05.865029+00:00'
+[2025-02-12T05:17:51.211+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2025-02-12T05:17:51.212+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2025-02-12T05:17:51.212+0000] {logging_mixin.py:190} INFO - Current task name:sensor_test state:running start_date:2025-02-12 05:17:50.501813+00:00
+[2025-02-12T05:17:51.213+0000] {logging_mixin.py:190} INFO - Dag name:sensor_timeout and current dag run status:running
+[2025-02-12T05:17:51.213+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-02-12T05:17:51.214+0000] {baseoperator.py:421} WARNING - S3KeySensor.execute cannot be called outside TaskInstance!
+[2025-02-12T05:17:51.230+0000] {s3.py:116} INFO - Poking for key : s3://***-test-benhur/data.csv
+[2025-02-12T05:17:51.248+0000] {base.py:84} INFO - Retrieving connection 'aws_default'
+[2025-02-12T05:17:51.248+0000] {connection_wrapper.py:328} INFO - AWS Connection (conn_id='aws_default', conn_type='aws') credentials retrieved from extra.
+[2025-02-12T05:17:54.616+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/urllib3/connectionpool.py:1099: InsecureRequestWarning: Unverified HTTPS request is being made to host '***-test-benhur.s3.eu-north-1.amazonaws.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+
+[2025-02-12T05:17:54.859+0000] {taskinstance.py:309} INFO - Rescheduling task, marking task as UP_FOR_RESCHEDULE
+[2025-02-12T05:17:54.860+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-02-12T05:17:54.921+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-02-12T05:17:55.192+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-02-12T05:17:55.194+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2025-02-12T05:18:27.445+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-02-12T05:18:27.463+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: sensor_timeout.sensor_test manual__2025-02-12T05:17:05.865029+00:00 [queued]>
+[2025-02-12T05:18:27.474+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: sensor_timeout.sensor_test manual__2025-02-12T05:17:05.865029+00:00 [queued]>
+[2025-02-12T05:18:27.474+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 1
+[2025-02-12T05:18:27.488+0000] {taskinstance.py:2889} INFO - Executing <Task(S3KeySensor): sensor_test> on 2025-02-12 05:17:05.865029+00:00
+[2025-02-12T05:18:27.502+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=287) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-02-12T05:18:27.504+0000] {standard_task_runner.py:72} INFO - Started process 289 to run task
+[2025-02-12T05:18:27.504+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'sensor_timeout', 'sensor_test', 'manual__2025-02-12T05:17:05.865029+00:00', '--job-id', '121', '--raw', '--subdir', 'DAGS_FOLDER/s3test_dag.py', '--cfg-path', '/tmp/tmp2st23pm4']
+[2025-02-12T05:18:27.506+0000] {standard_task_runner.py:105} INFO - Job 121: Subtask sensor_test
+[2025-02-12T05:18:27.847+0000] {task_command.py:467} INFO - Running <TaskInstance: sensor_timeout.sensor_test manual__2025-02-12T05:17:05.865029+00:00 [running]> on host 3b1fc8480f51
+[2025-02-12T05:18:27.942+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='sensor_timeout' AIRFLOW_CTX_TASK_ID='sensor_test' AIRFLOW_CTX_EXECUTION_DATE='2025-02-12T05:17:05.865029+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-02-12T05:17:05.865029+00:00'
+[2025-02-12T05:18:27.943+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2025-02-12T05:18:27.943+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2025-02-12T05:18:27.943+0000] {logging_mixin.py:190} INFO - Current task name:sensor_test state:running start_date:2025-02-12 05:18:27.463548+00:00
+[2025-02-12T05:18:27.943+0000] {logging_mixin.py:190} INFO - Dag name:sensor_timeout and current dag run status:running
+[2025-02-12T05:18:27.944+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-02-12T05:18:27.944+0000] {baseoperator.py:421} WARNING - S3KeySensor.execute cannot be called outside TaskInstance!
+[2025-02-12T05:18:27.955+0000] {s3.py:116} INFO - Poking for key : s3://***-test-benhur/data.csv
+[2025-02-12T05:18:27.967+0000] {base.py:84} INFO - Retrieving connection 'aws_default'
+[2025-02-12T05:18:27.967+0000] {connection_wrapper.py:328} INFO - AWS Connection (conn_id='aws_default', conn_type='aws') credentials retrieved from extra.
+[2025-02-12T05:18:29.294+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/urllib3/connectionpool.py:1099: InsecureRequestWarning: Unverified HTTPS request is being made to host '***-test-benhur.s3.eu-north-1.amazonaws.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+
+[2025-02-12T05:18:29.563+0000] {taskinstance.py:309} INFO - Rescheduling task, marking task as UP_FOR_RESCHEDULE
+[2025-02-12T05:18:29.563+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-02-12T05:18:29.604+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-02-12T05:18:29.874+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-02-12T05:18:29.875+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2025-02-12T05:19:02.658+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-02-12T05:19:02.679+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: sensor_timeout.sensor_test manual__2025-02-12T05:17:05.865029+00:00 [queued]>
+[2025-02-12T05:19:02.689+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: sensor_timeout.sensor_test manual__2025-02-12T05:17:05.865029+00:00 [queued]>
+[2025-02-12T05:19:02.690+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 1
+[2025-02-12T05:19:02.708+0000] {taskinstance.py:2889} INFO - Executing <Task(S3KeySensor): sensor_test> on 2025-02-12 05:17:05.865029+00:00
+[2025-02-12T05:19:02.723+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=298) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-02-12T05:19:02.726+0000] {standard_task_runner.py:72} INFO - Started process 300 to run task
+[2025-02-12T05:19:02.726+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'sensor_timeout', 'sensor_test', 'manual__2025-02-12T05:17:05.865029+00:00', '--job-id', '122', '--raw', '--subdir', 'DAGS_FOLDER/s3test_dag.py', '--cfg-path', '/tmp/tmpc5g97ek4']
+[2025-02-12T05:19:02.727+0000] {standard_task_runner.py:105} INFO - Job 122: Subtask sensor_test
+[2025-02-12T05:19:03.068+0000] {task_command.py:467} INFO - Running <TaskInstance: sensor_timeout.sensor_test manual__2025-02-12T05:17:05.865029+00:00 [running]> on host 3b1fc8480f51
+[2025-02-12T05:19:03.168+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='sensor_timeout' AIRFLOW_CTX_TASK_ID='sensor_test' AIRFLOW_CTX_EXECUTION_DATE='2025-02-12T05:17:05.865029+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-02-12T05:17:05.865029+00:00'
+[2025-02-12T05:19:03.169+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2025-02-12T05:19:03.170+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2025-02-12T05:19:03.170+0000] {logging_mixin.py:190} INFO - Current task name:sensor_test state:running start_date:2025-02-12 05:19:02.680292+00:00
+[2025-02-12T05:19:03.170+0000] {logging_mixin.py:190} INFO - Dag name:sensor_timeout and current dag run status:running
+[2025-02-12T05:19:03.170+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-02-12T05:19:03.171+0000] {baseoperator.py:421} WARNING - S3KeySensor.execute cannot be called outside TaskInstance!
+[2025-02-12T05:19:03.182+0000] {s3.py:116} INFO - Poking for key : s3://***-test-benhur/data.csv
+[2025-02-12T05:19:03.192+0000] {base.py:84} INFO - Retrieving connection 'aws_default'
+[2025-02-12T05:19:03.193+0000] {connection_wrapper.py:328} INFO - AWS Connection (conn_id='aws_default', conn_type='aws') credentials retrieved from extra.
+[2025-02-12T05:19:05.667+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/urllib3/connectionpool.py:1099: InsecureRequestWarning: Unverified HTTPS request is being made to host '***-test-benhur.s3.eu-north-1.amazonaws.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+
+[2025-02-12T05:19:05.930+0000] {taskinstance.py:309} INFO - Rescheduling task, marking task as UP_FOR_RESCHEDULE
+[2025-02-12T05:19:05.930+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-02-12T05:19:05.989+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-02-12T05:19:06.250+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-02-12T05:19:06.251+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2025-02-12T05:19:37.722+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-02-12T05:19:37.740+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: sensor_timeout.sensor_test manual__2025-02-12T05:17:05.865029+00:00 [queued]>
+[2025-02-12T05:19:37.749+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: sensor_timeout.sensor_test manual__2025-02-12T05:17:05.865029+00:00 [queued]>
+[2025-02-12T05:19:37.749+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 1
+[2025-02-12T05:19:37.761+0000] {taskinstance.py:2889} INFO - Executing <Task(S3KeySensor): sensor_test> on 2025-02-12 05:17:05.865029+00:00
+[2025-02-12T05:19:37.773+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=309) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-02-12T05:19:37.774+0000] {standard_task_runner.py:72} INFO - Started process 311 to run task
+[2025-02-12T05:19:37.776+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'sensor_timeout', 'sensor_test', 'manual__2025-02-12T05:17:05.865029+00:00', '--job-id', '123', '--raw', '--subdir', 'DAGS_FOLDER/s3test_dag.py', '--cfg-path', '/tmp/tmp3bzrcp6m']
+[2025-02-12T05:19:37.777+0000] {standard_task_runner.py:105} INFO - Job 123: Subtask sensor_test
+[2025-02-12T05:19:38.016+0000] {task_command.py:467} INFO - Running <TaskInstance: sensor_timeout.sensor_test manual__2025-02-12T05:17:05.865029+00:00 [running]> on host 3b1fc8480f51
+[2025-02-12T05:19:38.095+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='sensor_timeout' AIRFLOW_CTX_TASK_ID='sensor_test' AIRFLOW_CTX_EXECUTION_DATE='2025-02-12T05:17:05.865029+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-02-12T05:17:05.865029+00:00'
+[2025-02-12T05:19:38.095+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2025-02-12T05:19:38.096+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2025-02-12T05:19:38.096+0000] {logging_mixin.py:190} INFO - Current task name:sensor_test state:running start_date:2025-02-12 05:19:37.740429+00:00
+[2025-02-12T05:19:38.096+0000] {logging_mixin.py:190} INFO - Dag name:sensor_timeout and current dag run status:running
+[2025-02-12T05:19:38.096+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-02-12T05:19:38.096+0000] {baseoperator.py:421} WARNING - S3KeySensor.execute cannot be called outside TaskInstance!
+[2025-02-12T05:19:38.106+0000] {s3.py:116} INFO - Poking for key : s3://***-test-benhur/data.csv
+[2025-02-12T05:19:38.116+0000] {base.py:84} INFO - Retrieving connection 'aws_default'
+[2025-02-12T05:19:38.117+0000] {connection_wrapper.py:328} INFO - AWS Connection (conn_id='aws_default', conn_type='aws') credentials retrieved from extra.
+[2025-02-12T05:19:39.266+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/urllib3/connectionpool.py:1099: InsecureRequestWarning: Unverified HTTPS request is being made to host '***-test-benhur.s3.eu-north-1.amazonaws.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+
+[2025-02-12T05:19:39.490+0000] {taskinstance.py:3311} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 422, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/amazon/aws/sensors/s3.py", line 187, in execute
+    super().execute(context)
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 422, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/sensors/base.py", line 323, in execute
+    raise AirflowSensorTimeout(message)
+airflow.exceptions.AirflowSensorTimeout: Sensor has timed out; run duration of 150.559 seconds exceeds the specified timeout of 120.0.
+[2025-02-12T05:19:39.499+0000] {logging_mixin.py:190} INFO - Task instance in failure state
+[2025-02-12T05:19:39.499+0000] {logging_mixin.py:190} INFO - Task start:2025-02-12 05:19:37.740429+00:00 end:2025-02-12 05:19:39.498689+00:00 duration:1.75826
+[2025-02-12T05:19:39.499+0000] {logging_mixin.py:190} INFO - Task:<Task(S3KeySensor): sensor_test> dag:<DAG: sensor_timeout> dagrun:<DagRun sensor_timeout @ 2025-02-12 05:17:05.865029+00:00: manual__2025-02-12T05:17:05.865029+00:00, state:running, queued_at: 2025-02-12 05:17:05.875341+00:00. externally triggered: True>
+[2025-02-12T05:19:39.500+0000] {logging_mixin.py:190} INFO - Failure caused by Sensor has timed out; run duration of 150.559 seconds exceeds the specified timeout of 120.0.
+[2025-02-12T05:19:39.500+0000] {taskinstance.py:1225} INFO - Immediate failure requested. Marking task as FAILED. dag_id=sensor_timeout, task_id=sensor_test, run_id=manual__2025-02-12T05:17:05.865029+00:00, execution_date=20250212T051705, start_date=20250212T051937, end_date=20250212T051939
+[2025-02-12T05:19:39.513+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-02-12T05:19:39.514+0000] {standard_task_runner.py:124} ERROR - Failed to execute job 123 for task sensor_test (Sensor has timed out; run duration of 150.559 seconds exceeds the specified timeout of 120.0.; 311)
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py", line 117, in _start_by_fork
+    ret = args.func(args, dag=self.dag)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/cli.py", line 116, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 256, in _run_task_by_selected_method
+    return _run_raw_task(args, ti)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 341, in _run_raw_task
+    return ti._run_raw_task(
+           ^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3005, in _run_raw_task
+    return _run_raw_task(
+           ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 273, in _run_raw_task
+    TaskInstance._execute_task_with_callbacks(
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3159, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3183, in _execute_task
+    return _execute_task(self, context, task_orig)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 422, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/amazon/aws/sensors/s3.py", line 187, in execute
+    super().execute(context)
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 422, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/sensors/base.py", line 323, in execute
+    raise AirflowSensorTimeout(message)
+airflow.exceptions.AirflowSensorTimeout: Sensor has timed out; run duration of 150.559 seconds exceeds the specified timeout of 120.0.
+[2025-02-12T05:19:39.554+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 1
+[2025-02-12T05:19:39.729+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-02-12T05:19:39.739+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

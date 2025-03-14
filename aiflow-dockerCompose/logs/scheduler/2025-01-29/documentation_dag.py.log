@@ -1,0 +1,87 @@
+[2025-01-29T04:44:33.358+0000] {processor.py:186} INFO - Started process (PID=76) to work on /opt/airflow/dags/documentation_dag.py
+[2025-01-29T04:44:33.359+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/documentation_dag.py for tasks to queue
+[2025-01-29T04:44:33.362+0000] {logging_mixin.py:190} INFO - [2025-01-29T04:44:33.362+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/documentation_dag.py
+[2025-01-29T04:44:33.376+0000] {logging_mixin.py:190} INFO - [2025-01-29T04:44:33.372+0000] {dagbag.py:484} ERROR - Failed to bag_dag: /opt/airflow/dags/documentation_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/timetables/_cron.py", line 102, in validate
+    croniter(self._expression)
+  File "/home/airflow/.local/lib/python3.12/site-packages/croniter/croniter.py", line 271, in __init__
+    self.expanded, self.nth_weekday_of_month = self.expand(
+                                               ^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/croniter/croniter.py", line 1032, in expand
+    return cls._expand(expr_format, hash_id=hash_id,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/croniter/croniter.py", line 987, in _expand
+    raise CroniterBadCronError(
+croniter.croniter.CroniterBadCronError: [0 0 0 0 0] is not acceptable, out of range
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 479, in _process_modules
+    dag.validate()
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dag.py", line 845, in validate
+    self.timetable.validate()
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/timetables/_cron.py", line 104, in validate
+    raise AirflowTimetableInvalid(str(e))
+airflow.exceptions.AirflowTimetableInvalid: [0 0 0 0 0] is not acceptable, out of range
+[2025-01-29T04:44:33.376+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/documentation_dag.py
+[2025-01-29T04:44:33.406+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/documentation_dag.py took 0.057 seconds
+[2025-01-29T04:46:06.004+0000] {processor.py:186} INFO - Started process (PID=71) to work on /opt/airflow/dags/documentation_dag.py
+[2025-01-29T04:46:06.006+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/documentation_dag.py for tasks to queue
+[2025-01-29T04:46:06.009+0000] {logging_mixin.py:190} INFO - [2025-01-29T04:46:06.009+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/documentation_dag.py
+[2025-01-29T04:46:06.024+0000] {logging_mixin.py:190} INFO - [2025-01-29T04:46:06.019+0000] {dagbag.py:484} ERROR - Failed to bag_dag: /opt/airflow/dags/documentation_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/timetables/_cron.py", line 102, in validate
+    croniter(self._expression)
+  File "/home/airflow/.local/lib/python3.12/site-packages/croniter/croniter.py", line 271, in __init__
+    self.expanded, self.nth_weekday_of_month = self.expand(
+                                               ^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/croniter/croniter.py", line 1032, in expand
+    return cls._expand(expr_format, hash_id=hash_id,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/croniter/croniter.py", line 987, in _expand
+    raise CroniterBadCronError(
+croniter.croniter.CroniterBadCronError: [0 0 0 0 0] is not acceptable, out of range
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 479, in _process_modules
+    dag.validate()
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dag.py", line 845, in validate
+    self.timetable.validate()
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/timetables/_cron.py", line 104, in validate
+    raise AirflowTimetableInvalid(str(e))
+airflow.exceptions.AirflowTimetableInvalid: [0 0 0 0 0] is not acceptable, out of range
+[2025-01-29T04:46:06.024+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/documentation_dag.py
+[2025-01-29T04:46:06.050+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/documentation_dag.py took 0.053 seconds
+[2025-01-29T04:46:36.697+0000] {processor.py:186} INFO - Started process (PID=137) to work on /opt/airflow/dags/documentation_dag.py
+[2025-01-29T04:46:36.697+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/documentation_dag.py for tasks to queue
+[2025-01-29T04:46:36.700+0000] {logging_mixin.py:190} INFO - [2025-01-29T04:46:36.699+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/documentation_dag.py
+[2025-01-29T04:46:36.710+0000] {logging_mixin.py:190} INFO - [2025-01-29T04:46:36.707+0000] {dagbag.py:484} ERROR - Failed to bag_dag: /opt/airflow/dags/documentation_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/timetables/_cron.py", line 102, in validate
+    croniter(self._expression)
+  File "/home/airflow/.local/lib/python3.12/site-packages/croniter/croniter.py", line 271, in __init__
+    self.expanded, self.nth_weekday_of_month = self.expand(
+                                               ^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/croniter/croniter.py", line 1032, in expand
+    return cls._expand(expr_format, hash_id=hash_id,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/croniter/croniter.py", line 987, in _expand
+    raise CroniterBadCronError(
+croniter.croniter.CroniterBadCronError: [0 0 0 0 0] is not acceptable, out of range
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 479, in _process_modules
+    dag.validate()
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dag.py", line 845, in validate
+    self.timetable.validate()
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/timetables/_cron.py", line 104, in validate
+    raise AirflowTimetableInvalid(str(e))
+airflow.exceptions.AirflowTimetableInvalid: [0 0 0 0 0] is not acceptable, out of range
+[2025-01-29T04:46:36.710+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/documentation_dag.py
+[2025-01-29T04:46:36.728+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/documentation_dag.py took 0.037 seconds
